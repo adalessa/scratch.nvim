@@ -2,7 +2,7 @@ local M = {}
 
 ---@class ScratchOptions
 M.defaults = {
-  path = vim.fn.stdpath('data') .. '/scratch',
+  path = vim.fn.stdpath('data') .. '/scratch/lua',
   new_scratch_map = '<c-y>',
   local_map = "<LocalLeader>x",
 }
