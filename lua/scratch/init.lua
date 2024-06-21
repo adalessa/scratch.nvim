@@ -9,14 +9,13 @@ function M.setup(opts)
   vim.fn.mkdir(config.options.path, 'p')
 
   local group = vim.api.nvim_create_augroup("scratch", {})
-  local id = vim.api.nvim_create_autocmd({"BufEnter"}, {
+  vim.api.nvim_create_autocmd({"BufEnter"}, {
     pattern = config.options.path .. "/*",
     group = group,
     callback = function(ev)
       vim.keymap.set('n', config.options.local_map, M.save_and_exec, { buffer = ev.buf, silent = true })
     end
   })
-  vim.print("id: " .. id)
 end
 
 function M.new(prompt_bufnr)
