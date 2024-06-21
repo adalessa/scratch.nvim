@@ -8,7 +8,7 @@ function M.setup(opts)
 
   vim.fn.mkdir(config.options.path, 'p')
 
-  vim.api.nvim_create_autocmd("BufEnter", {
+  vim.api.nvim_create_autocmd({"BufEnter"}, {
     pattern = config.options.path .. "/*",
     callback = function(ev)
       vim.keymap.set('n', config.options.local_map, M.save_and_exec, { buffer = ev.buf, silent = true })
