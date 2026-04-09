@@ -9,7 +9,7 @@ Lazy
 {
   "adalessa/scratch.nvim",
   dependencies = {
-    "nvim-telescope/telescope.nvim",
+    "folke/snacks.nvim",
   },
   opts = {},
   keys = {
